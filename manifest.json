@@ -1,1 +1,15 @@
-{'name': 'Salary Sherlock', 'short_name': 'Wynagrodzenie', 'start_url': 'index.html', 'display': 'standalone', 'background_color': '#1a1a1a', 'theme_color': '#1a1a1a', 'icons': [{'src': 'icon.png', 'sizes': '512x512', 'type': 'image/png'}]}
+{
+    "name": "Salary Sherlock",
+    "short_name": "Wynagrodzenie",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#1a1a1a",
+    "theme_color": "#1a1a1a",
+    "icons": [
+        {
+            "src": "app-icon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
