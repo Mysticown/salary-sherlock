@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <title>Salary Sherlock</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#1a1a1a">
+    <link rel="manifest" href="manifest.json">
     <style>
         body {
             font-family: 'Inter', sans-serif;
             background: #f4f6f8;
+            color: #000;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
+            transition: background 0.3s, color 0.3s;
         }
         .container {
             background: #ffffff;
@@ -21,6 +26,7 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
             width: 100%;
             max-width: 450px;
+            transition: background 0.3s;
         }
         h2 {
             text-align: center;
@@ -73,12 +79,32 @@
         .radio-group {
             margin-top: 10px;
         }
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: #1a1a1a;
+                color: #f1f1f1;
+            }
+            .container {
+                background: #2a2a2a;
+            }
+            input[type="number"] {
+                background: #444;
+                border: 1px solid #666;
+                color: #fff;
+            }
+            button {
+                background-color: #3399ff;
+            }
+            button:hover {
+                background-color: #1a75d1;
+            }
+        }
     </style>
 </head>
 <body>
 <div class="container">
     <h2>Salary Sherlock</h2>
-    
+    <p>Szybko zweryfikuj swoje miesięczne wynagrodzenie.</p>
     <form id="salaryForm">
         <label>Typ wprowadzania godzin:</label>
         <div class="radio-group">
@@ -112,6 +138,10 @@
 </div>
 
 <script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js');
+    }
+
     const totalHoursDiv = document.getElementById('totalHours');
     const splitHoursDiv = document.getElementById('splitHours');
     let expected = 0;
