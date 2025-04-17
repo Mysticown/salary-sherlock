@@ -3,7 +3,8 @@ self.addEventListener('install', function(event) {
         caches.open('salary-cache').then(function(cache) {
             return cache.addAll([
                 'index.html',
-                'manifest.json'
+                'manifest.json',
+                'icon.png'
             ]);
         })
     );

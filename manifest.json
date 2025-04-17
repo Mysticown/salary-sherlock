@@ -1,1 +1,1 @@
-{'name': 'Salary Sherlock', 'short_name': 'Wynagrodzenie', 'start_url': 'index.html', 'display': 'standalone', 'background_color': '#1a1a1a', 'theme_color': '#1a1a1a', 'icons': [{'src': 'https://cdn-icons-png.flaticon.com/512/833/833472.png', 'sizes': '192x192', 'type': 'image/png'}]}
+{'name': 'Salary Sherlock', 'short_name': 'Wynagrodzenie', 'start_url': 'index.html', 'display': 'standalone', 'background_color': '#1a1a1a', 'theme_color': '#1a1a1a', 'icons': [{'src': 'icon.png', 'sizes': '512x512', 'type': 'image/png'}]}
