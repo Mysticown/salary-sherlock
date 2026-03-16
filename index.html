@@ -169,7 +169,7 @@
             const days24 = parseFloat(document.getElementById('days24').value) || 0;
             hours = days12 * 12 + days24 * 24;
         }
-        expected = hours * 30.5;
+        expected = hours * 31.4;
         document.getElementById('expectedSalary').textContent = `Oczekiwane wynagrodzenie: ${expected.toFixed(2)} PLN`;
         document.getElementById('result').textContent = '';
     }
